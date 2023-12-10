@@ -1,15 +1,14 @@
-import { HStack, Image, Text } from "@chakra-ui/react"
-import logo from "../assets/game (1).svg"
-
+import { HStack, Image } from "@chakra-ui/react";
+import logo from "../assets/game (1).svg";
+import ColormodeSwith from "./ColormodeSwith";
 
 function NavBar() {
   return (
-    <HStack>
-        <Image src={logo} boxSize={"60px"}/>
-        <Text>navbar</Text>
-
+    <HStack justifyContent={"space-between"} padding={"10px"}>
+      <Image src={logo} boxSize={"60px"} />
+      <ColormodeSwith />
     </HStack>
-  )
+  );
 }
 
-export default NavBar
+export default NavBar;
