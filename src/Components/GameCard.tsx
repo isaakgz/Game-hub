@@ -11,7 +11,12 @@ interface GameCardProps {
 function GameCard({ game }: GameCardProps) {
   return (
     <Card>
-      <Image src={getCroppedImageUlr(game.background_image)} />
+      <Image
+        src={
+          getCroppedImageUlr(game.background_image) ||
+          "https://placehold.co/600x400@2x.png"
+        }
+      />
       <CardBody>
         <Heading fontSize={"2xl"}>{game.name}</Heading>
         <HStack justifyContent={"space-between"}>
