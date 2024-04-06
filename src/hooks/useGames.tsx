@@ -2,6 +2,7 @@ import { useInfiniteQuery } from "@tanstack/react-query";
 import { GameQuery } from "../App";
 import { Platform } from "./usePlatforms";
 import APIclient, { FetchResponse } from "../services/apiClient";
+import ms from "ms";
 
 const apiClient = new APIclient<Game>("/games");
 
@@ -32,7 +33,7 @@ const useGames = (gameQuery: GameQuery) =>
     getNextPageParam: (lastPage, allPages) => {
       return lastPage.next ? allPages.length + 1 : undefined;
     },
-    staleTime: 24 * 60 * 60 * 1000, //24hr
+    staleTime: ms("24hr"), //24hr
   });
 
 export default useGames;
