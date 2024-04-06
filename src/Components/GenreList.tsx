@@ -9,7 +9,7 @@ import {
 } from "@chakra-ui/react";
 
 import getCroppedImageUlr from "../services/imageUrl";
-import useGenres, { Genre } from "../hooks/useGenre";
+import useGenres, { Genre } from "../hooks/useGenres";
 
 interface props {
   onSelect: (genre: Genre) => void;
@@ -40,7 +40,7 @@ function GenreList({ onSelect, selectedGenreId }: props) {
                 onClick={() => onSelect(genre)}
                 variant="link"
                 fontSize="lg"
-                fontWeight={selectedGenreId=== genre.id ? "bold" : "normal"}
+                fontWeight={selectedGenreId === genre.id ? "bold" : "normal"}
                 whiteSpace="normal"
                 textAlign="left"
               >
