@@ -9,7 +9,7 @@ import {
 } from "@chakra-ui/react";
 
 import useGenres from "../hooks/useGenres";
-import { Genre } from "../entites/Genre";
+import Genre from "../entites/Genre";
 import getCroppedImageUlr from "../services/imageUrl";
 import useGameQueryStore from "../store/gameQueryStore";
 

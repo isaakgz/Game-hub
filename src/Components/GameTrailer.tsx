@@ -10,8 +10,7 @@ function GameTrailer({ gameId }: GameTrailerProps) {
   if (isPending) return <Spinner />;
   if (error) throw error;
   const first = data.results[0];
-  return first ? <video src={first.data[480]} poster={first.preview} /> : null;
-  
+  return first ? <video src={first.data[480]} poster={first.preview} controls autoPlay /> : null;
 }
 
 export default GameTrailer;
