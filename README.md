@@ -1,30 +1,29 @@
-# React + TypeScript + Vite
+# Game Hub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Game Hub is a web application that uses the [RAWG.io API](https://rawg.io/apidocs) to fetch and display information about trending video games. It provides users with details about each game, including the platform, genre, relevance, screenshots, and trailers.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Game Details**: Displays detailed information about each game, including the platform, genre, and relevance.
+- **Screenshots**: Provides screenshots to give users a glimpse of the game.
+- **Trailers**: Offers game trailers for a more immersive preview.
+- **Trending Games**: Showcases trending games to keep users updated with the latest popular games.
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- [React](https://reactjs.org/): A JavaScript library for building user interfaces.
+- [React Router](https://reactrouter.com/): Declarative routing for React.
+- [React Query](https://react-query.tanstack.com/): A data synchronization library for fetching, caching, and updating server state in React applications.
+- [Zustand](https://github.com/pmndrs/zustand): A small, fast and scaleable bearbones state-management solution.
 
-- Configure the top-level `parserOptions` property like this:
+## Getting Started
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+To get a local copy up and running, follow these steps:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+1. Clone the repository.
+2. Install the dependencies with `npm install`.
+3. Start the development server with `npm run dev`.
+
+## Contributing
+
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
