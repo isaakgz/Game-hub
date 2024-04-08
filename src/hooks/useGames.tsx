@@ -13,11 +13,13 @@ export interface Game {
   background_image: string;
   parent_platforms: { platform: Platform }[];
   metacritic: number;
+  description_raw: string;
   rating_top: number;
+  slug: string;
 }
 
 const useGames = () => {
-  const gameQuery = useGameQueryStore(s => s.gameQuery)
+  const gameQuery = useGameQueryStore((s) => s.gameQuery);
 
   return useInfiniteQuery<FetchResponse<Game>, Error>({
     queryKey: ["games", gameQuery],
